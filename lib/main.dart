@@ -84,7 +84,7 @@ class _MyHomePageState extends State<MyHomePage> {
         await createPeerConnection(configuration, offerSdpConstraints);
 
     pc.addStream(_localStream!);
-
+    //pc.addTrack(_localStream!);
     pc.onIceCandidate = (e) {
       if (e.candidate != null) {
         print(json.encode({
